@@ -113,24 +113,24 @@ Estimated Total Size (MB): 4.53
 ````
 | Layer                           | Rin  | Rout | Jin  | Jout |
 |---------------------------------|-------|------|------|------|
-| **Input Image**                 | 1     | 1    | 1    | 1    |
-| **Block 1 (conv1)**             |       |      |      |      |
+|     Input Image                 | 1     | 1    | 1    | 1    |
+|      Block 1 (conv1)            |       |      |      |      |
 | Conv2d(3, 16, K=3, P=1, S=1)    | 1     | 3    | 1    | 1    |
 | Conv2d(16, 32, K=3, P=1, S=1)   | 3     | 5    | 1    | 1    |
 | Conv2d(32, 32, K=3, P=0, S=2)   | 5     | 7    | 1    | 2    |
-| **Block 2 (conv2: Depthwise)**  |       |      |      |      |
+|     Block 2 (conv2: Depthwise)  |       |      |      |      |
 | DepthwiseSeparableConv(K=3, P=1)| 7     | 11   | 2    | 2    |
 | DepthwiseSeparableConv(K=3, P=1)| 11    | 15   | 2    | 2    |
 | DepthwiseSeparableConv(K=3, D=2)| 15    | 27   | 2    | 2    |
-| **Block 3 (conv3)**             |       |      |      |      |
+|     Block 3 (conv3)             |       |      |      |      |
 | Conv2d(32, 64, K=3, P=1, S=1)   | 27    | 31   | 2    | 2    |
 | Conv2d(64, 64, K=3, P=1, S=1)   | 31    | 35   | 2    | 2    |
 | Conv2d(64, 32, K=3, P=0, S=2)   | 35    | 39   | 2    | 4    |
-| **Block 4 (conv4)**             |       |      |      |      |
+|      Block 4 (conv4)            |       |      |      |      |
 | Conv2d(32, 64, K=3, P=1, S=1)   | 39    | 47   | 4    | 4    |
 | Conv2d(64, 64, K=3, P=1, S=1)   | 47    | 55   | 4    | 4    |
 | Conv2d(64, 64, K=3, P=1, S=2)   | 55    | 63   | 4    | 8    |
-| **GAP (Global Avg Pool)**       | 63    | Full | 8    | -    |
+|     GAP (Global Avg Pool)       | 63    | Full | 8    | -    |
 ````
 
 #### To execute training -> python main.py
