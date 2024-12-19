@@ -132,3 +132,5 @@ Estimated Total Size (MB): 4.53
 | Conv2d(64, 64, K=3, P=1, S=2)   | 55    | 63   | 4    | 8    |
 | **GAP (Global Avg Pool)**       | 63    | Full | 8    | -    |
 ````
+
+#### To execute training -> python main.py
